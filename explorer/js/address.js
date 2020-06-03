@@ -6,7 +6,7 @@ var tx_count;
 if(GetURLParameter('address')) {
   address = GetURLParameter('address');
   //type = GetURLParameter('type');
-  $("#address")[0].textContent = shortenString(address);
+  $("#address")[0].textContent = address;
   jQuery.get("/v2/accounts/"+address, function(data, textStatus, jqXJR) {
     data = JSON.parse(data)
     $("#raw")[0].textContent = JSON.stringify(data).replace(/,/g,", ");

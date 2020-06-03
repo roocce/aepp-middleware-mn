@@ -1,0 +1,61 @@
+@font-face {
+  src: url("../fonts/Expletus_Sans/ExpletusSans-Medium.ttf");
+  font-family: 'Expletus';
+}
+
+@font-face {
+  src: url("../fonts/Varela_Round/VarelaRound-Regular.ttf");
+  font-family: 'VarelaRound';
+}
+
+@font-face {
+  src: url("../fonts/Inconsolata/static/Inconsolata-Regular.ttf");
+  font-family: 'Inconsolata';
+}
+
+html {
+  font-size: 16px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-family: 'Expletus';
+}
+
+body,
+#history h6 {
+  font-family: 'VarelaRound';
+}
+
+#icon-open,
+#icon-close-top,
+#icon-close-bottom {
+  font-size: xx-large;
+}
+
+#navigation {
+  font-size: larger;
+  list-style: none; 
+}
+
+#navigation a:hover {
+  text-decoration: none;
+}
+
+#profile #raw table td:nth-child(2),
+#transactions span {
+  font-family: 'Inconsolata';
+}
+
+#profile #address {
+  font-size: smaller;
+}
+
+#transactions {
+  font-size: larger;
+}
+
+#profile #address,
+#transactions td {
+  word-break: break-word;
+}

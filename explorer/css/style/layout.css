@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+header h1 {
+  text-align: center;
+}
+
+#icon-open,
+#icon-close-top,
+#icon-close-bottom {
+  text-align: center;
+}
+
+#navigation {
+  margin: 0rem;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#navigation a {
+  width: 100%;
+  text-align: center;
+  margin: 0.75rem 0rem;
+}
+
+header h4 {
+  margin: 0.5rem 0.2rem;
+}
+
+header div.site_badge {
+  min-width: 5rem;
+  max-height: 2rem;
+  margin: auto;
+  text-align: center;
+}
+
+#profile header {
+  display: flex;
+}
+
+#profile table {
+  margin: auto;
+}
+
+#profile #raw td:nth-child(2) {
+  text-align: right;
+}
+
+#history table {
+  display: block;
+}
+
+#history thead th {
+  padding: 0rem;
+}
+
+#transactions tr {
+  display: grid;
+  grid-gap: 0.1rem;
+  margin: 1rem;
+}
+#transactions tr.tx_in {
+    grid-template-areas:
+    "badge    bheight"
+    "ammount  sender"
+    "hash     recipient"
+    "payload  payload"
+    "date     date";
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+#transactions tr.tx_out {
+  grid-template-areas:
+    "badge    bheight"
+    "ammount  sender"
+    "hash     recipient"
+    "date     date";
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+#transactions tr.tx_preclaim {
+  grid-template-areas:
+    "badge    bheight"
+    "hash     account"
+    "date     date";
+  grid-template-rows: 2fr 3fr 3fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+#transactions td:nth-child(1) {
+  padding: 0rem;
+}
+
+#transactions td {
+  padding: 0rem;
+}
+
+#transactions td.tx_badge {
+  grid-area: badge;
+}
+
+#transactions td.sender {
+  grid-area: sender;
+}
+
+#transactions td.account {
+  grid-area: account;
+}
+
+#transactions td.recipient {
+  grid-area: recipient;
+}
+
+#transactions td.blk_hgt {
+  grid-area: bheight;
+}
+
+#transactions td.ammount {
+  grid-area: ammount;
+}
+
+#transactions td.hash {
+  grid-area: hash;
+}
+
+#transactions td.payload {
+  grid-area: payload;
+}
+
+#transactions td.age,
+#transactions td.tzdata {
+  grid-area: date;
+}

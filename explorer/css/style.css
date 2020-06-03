@@ -1,21 +1,16 @@
-table > tbody > tr > td {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-table > tbody > tr:nth-child(odd) {
+/*table > tbody > tr:nth-child(odd) {
   background-color: #F7F7F7;
 }
 
 table > tbody > tr:nth-child(even) {
   background-color: #FFFFFF;
-}
+}*/
 
 table.maintable > tbody > tr {
   border: 1px;
   border-style: none;
   border-bottom-style: solid;
-  border-top-style: solid;
+  /* border-top-style: solid; */
 }
 
 table.subtable {

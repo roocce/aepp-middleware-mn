@@ -75,6 +75,9 @@ function transverse(obj, result) {
           result += transverse(obj[i], "<tr><td>"+i+"</td><td colspan='2'><table class='subtable'>") + "</table></td></tr>";
         } else {
           switch(i) {
+	    case "id":
+	      processed = "<span title='"+ obj[i] +"'>" + shortenString(obj[i]) + "</span>"
+	      break;
             case "time":
               processed = "<span title= '" + obj[i].toString() + "'>" + new Date(obj[i]).toUTCString() + "</span> (" + timeSince(obj[i]) + " ago)"
             break;
@@ -126,10 +129,30 @@ function transverse(obj, result) {
             default:
               processed = obj[i]
           }
-          result += "<tr><td class='text-primary'>" + i + "</td>" +
+          result += "<tr><td>" + i + "</td>" +
                     "<td>" + processed + "</td>" +
-                    "<td class='text-danger'>" + typeof(obj[i]) + "</td></tr>";
+		    "</tr>";
+//                    "<td>" + typeof(obj[i]) + "</td></tr>";
         }
     }
     return result;
 }
+
+
+icon_open = $("#icon-open")
+icon_close_top = $("#icon-close-top")
+icon_close_bottom = $("#icon-close-bottom")
+nav = $("#navigation")
+
+$("#handle").click(function(){
+  icon_open.toggle()
+  icon_close_top.toggle()
+  icon_close_bottom.toggle()
+  nav.slideToggle(150)
+});
+
+$(document).ready(function(){
+  icon_close_top.hide()
+  icon_close_bottom.hide()
+  nav.hide()
+})

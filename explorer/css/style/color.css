@@ -1,0 +1,71 @@
+:root {
+  /* theme colors */
+  --primary:      #253529;  /* leather jacket*/
+  --secondary:    #FC5A8D;  /* strawberry*/
+  /* neutral */
+  --light:      #FEFEFA;  /* baby powder */
+  --dark:       #1A1110;  /* licorice */
+  /* badges */
+  --red:        #DA2647;  /* cherry */
+  --green:      #45A27D;  /* pine */
+  --gray:       #738276;  /* smoke */
+}
+
+body {
+  color: var(--licorice);
+  background-color: var(--light);
+}
+
+body>header,
+#navigation a {
+  color: var(--light);
+  background-color: var(--primary);
+}
+
+#navigation a:hover,
+#navigation a:focus {
+  background-color: var(--secondary);
+}
+
+#profile header {
+  color: var(--light);
+  background-color: var(--gray);
+}
+
+#profile #address {
+  text-shadow: 0.1rem 0.1rem 0.1rem var(--dark);
+}
+
+#profile div.site_badge {
+  color: whitesmoke;
+  background-color: var(--secondary);
+  border-radius: 0.3rem;
+}
+
+#transactions tr {
+  background: radial-gradient(ellipse farthest-side, lightsteelblue 50%, var(--light));
+  box-shadow: 0.2rem 0.1rem 0.5rem lightsteelblue;
+}
+
+#transactions td {
+  background-color: var(--light);
+  text-shadow: 0.1rem 0.1rem 0.2rem lightgray;
+}
+
+#transactions .tx_badge div {
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  color: var(--light);
+  text-shadow: 0.1rem 0.1rem 0.2rem var(--dark);
+}
+
+#transactions .tx_in div {
+  background-color: var(--green);
+}
+
+#transactions .tx_out div {
+  background-color: var(--red);
+}
+
+#transactions .tx_preclaim div {
+ background-color: var(--gray); 
+}
